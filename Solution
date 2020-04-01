@@ -1,0 +1,29 @@
+x=input()
+Z=0
+O=0
+ERR=False
+for i in x:
+    if i=='z':
+        if O>0:
+            ERR=True
+            break
+        elif Z>20:            
+            ERR=True
+            break
+        else:
+            Z = Z+ 1    
+    elif i=='o':
+        O=O+1
+    else:
+        
+        ERR=True
+        break
+
+
+if ERR == True:
+    print ("No")
+else:
+    if 2*Z == O:
+        print ("Yes")
+    else:
+        print ("No")
